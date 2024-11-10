@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People's Bank - Welikanda Branch</title>
+    <!-- Added Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(120deg, #1a365d 0%, #2d3748 100%);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #4299e1;
+            left: 0;
+            bottom: -4px;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .service-card {
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Rest of the HTML remains exactly the same as before -->
+    <!-- Navbar -->
+    <nav class="gradient-bg text-white py-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold">People's Bank</div>
+                <span class="ml-2 text-sm bg-blue-500 px-2 py-1 rounded">Welikanda</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden fixed w-full bg-gray-800 text-white z-40 mt-16">
+        <div class="container mx-auto px-6 py-4">
+            <a href="#home" class="block py-2">Home</a>
+            <a href="#services" class="block py-2">Services</a>
+            <a href="#about" class="block py-2">About</a>
+            <a href="#contact" class="block py-2">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-12 gradient-bg text-white">
+        <div class="container mx-auto px-6 py-24">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4">Welcome to People's Bank</h1>
+                <p class="text-xl mb-8">Your Trusted Financial Partner in Welikanda</p>
+                <button class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full transition duration-300">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card p-6 bg-gray-50 rounded-lg shadow-lg">
+                    <div class="text-blue-500 text-4xl mb-4">💳</div>
+                    <h3 class="text-xl font-bold mb-2">Personal Banking</h3>
+                    <p class="text-gray-600">Comprehensive personal banking solutions tailored to your needs.</p>
+                </div>
+                <div class="service-card p-6 bg-gray-50 rounded-lg shadow-lg">
+                    <div class="text-blue-500 text-4xl mb-4">🏢</div>
+                    <h3 class="text-xl font-bold mb-2">Corporate Banking</h3>
+                    <p class="text-gray-600">Specialized services for businesses of all sizes.</p>
+                </div>
+                <div class="service-card p-6 bg-gray-50 rounded-lg shadow-lg">
+                    <div class="text-blue-500 text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold mb-2">Digital Banking</h3>
+                    <p class="text-gray-600">Modern banking solutions at your fingertips.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">About Our Branch</h2>
+                <p class="text-gray-600 mb-6">
+                    Located on the Maradankadawala-Habarana-Thirukkondaiadimadu Highway, our Welikanda branch serves as a 
+                    crucial financial hub in the Polonnaruwa District of Sri Lanka.
+                </p>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Operating Hours</h3>
+                    <p class="text-gray-600">Monday - Friday: 8:30 AM - 3:00 PM</p>
+                    <p class="text-gray-600">Weekends: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                    <div class="space-y-4">
+                        <p class="flex items-center">
+                            <span class="mr-2">📞</span>
+                            <span>+94 27 2259038</span>
+                        </p>
+                        <p class="flex items-center">
+                            <span class="mr-2">📠</span>
+                            <span>+94 27 2259264</span>
+                        </p>
+                        <p class="flex items-center">
+                            <span class="mr-2">📧</span>
+                            <span>welik254@peoplesbank.lk</span>
+                        </p>
+                        <p class="flex items-center">
+                            <span class="mr-2">🏦</span>
+                            <span>SWIFT: PSBKLKLX</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" class="w-full p-2 border rounded" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full p-2 border rounded" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Message</label>
+                            <textarea class="w-full p-2 border rounded h-32" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <p class="mb-4">© 2024 People's Bank - Welikanda Branch. All rights reserved.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="hover:text-blue-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-blue-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
+        });
+
+        // Scroll to top button visibility
+        window.addEventListener('scroll', function() {
+            if (document.documentElement.scrollTop > 300) {
+                document.querySelector('.scroll-to-top').classList.remove('hidden');
+            } else {
+                document.querySelector('.scroll-to-top').classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
